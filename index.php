@@ -2,11 +2,12 @@
 
 require_once __DIR__ . '/Model/Movie.php';
 
-$il_gladiatore = new Movie('Il Gladiatore', 'Ridley Scott', ['Russell Crowe', 'Joaquin Phoenix', 'Connie Nielsen'], 9.10, 'italiano', 5.00)
-// $il_gladiatore = new Movie('Il Gladiatore', 'Ridley Scott', ['Russell Crowe', 'joaquin_phoenix', 'Connie Nielsen'], 9.10, 'italiano' 5.00);
+$il_gladiatore = new Movie('Il Gladiatore', 'Ridley Scott', ['Russell Crowe', 'Joaquin Phoenix', 'Connie Nielsen'], 9.10, 'italiano', 5.00);
 
+$transformers = new Movie('Transformers', 'Michael Bay', ['Megan Fox', 'Shia LeBeouf', 'Rachel Taylor', 'Josh Duhamel'], 8.20, 'italiano', 6.00);
 
-// var_dump($il_gladiatore)
+var_dump($il_gladiatore);
+var_dump($transformers);
 ?>
 
 
@@ -23,9 +24,54 @@ $il_gladiatore = new Movie('Il Gladiatore', 'Ridley Scott', ['Russell Crowe', 'J
 
 <body>
     <div class="container my-4 ">
-        <h1>Movies</h1>
-        <h4><?php echo $il_gladiatore->getInfoPrice() ?> </h4>
-        <h6><?php echo $il_gladiatore->getFullInfo() ?></h6>
+        <h1 class="text-center">Movies</h1>
+
+        <div class="row row-cols-3 my-5 ">
+            <!-- <h4><?php echo $il_gladiatore->getInfoPrice() ?> </h4>
+            <h6><?php echo $il_gladiatore->getFullInfo() ?></h6> -->
+
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-footer">
+                    Card footer
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-footer">
+                    Card footer
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-footer">
+                    Card footer
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">An item</li>
+                    <li class="list-group-item">A second item</li>
+                    <li class="list-group-item">A third item</li>
+                </ul>
+                <div class="card-footer">
+                    Card footer
+                </div>
+            </div>
+        </div>
+
     </div>
 </body>
 

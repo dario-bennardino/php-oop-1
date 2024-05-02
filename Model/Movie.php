@@ -28,6 +28,6 @@ class Movie
     public function getFullInfo()
     {
         $castString = implode(', ', $this->cast);
-        return "$this->nome, $this->regista, $castString, $this->voto, $this->lingua, &euro;$this->price,";
+        return "$this->nome, Regista: $this->regista, Cast: $castString, Voto: $this->voto, Lingua: $this->lingua, Prezzo: &euro;$this->price,";
     }
 }
