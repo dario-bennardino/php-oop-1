@@ -2,9 +2,11 @@
 
 require_once __DIR__ . '/Model/Movie.php';
 
-$il_gladiatore = new Movie('Il Gladiatore', 'Ridley Scott', ['Russell Crowe', 'joaquin_phoenix', 'Connie Nielsen'], 5.00);
+$il_gladiatore = new Movie('Il Gladiatore', 'Ridley Scott', ['Russell Crowe', 'Joaquin Phoenix', 'Connie Nielsen'], 9.10, 'italiano', 5.00)
+// $il_gladiatore = new Movie('Il Gladiatore', 'Ridley Scott', ['Russell Crowe', 'joaquin_phoenix', 'Connie Nielsen'], 9.10, 'italiano' 5.00);
 
-var_dump($il_gladiatore)
+
+// var_dump($il_gladiatore)
 ?>
 
 
@@ -22,7 +24,8 @@ var_dump($il_gladiatore)
 <body>
     <div class="container my-4 ">
         <h1>Movies</h1>
-        <h3><?php $il_gladiatore->getInfoPrice() ?> </h3>
+        <h4><?php echo $il_gladiatore->getInfoPrice() ?> </h4>
+        <h6><?php echo $il_gladiatore->getFullInfo() ?></h6>
     </div>
 </body>
 
