@@ -30,4 +30,9 @@ class Movie
         $castString = implode(', ', $this->cast);
         return "$this->nome, Regista: $this->regista, Cast: $castString, Voto: $this->voto, Lingua: $this->lingua, Prezzo: &euro;$this->price,";
     }
+
+    public function getFullCast()
+    {
+        return implode(', ', $this->cast);
+    }
 }

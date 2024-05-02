@@ -6,8 +6,10 @@ $il_gladiatore = new Movie('Il Gladiatore', 'Ridley Scott', ['Russell Crowe', 'J
 
 $transformers = new Movie('Transformers', 'Michael Bay', ['Megan Fox', 'Shia LeBeouf', 'Rachel Taylor', 'Josh Duhamel'], 8.20, 'italiano', 6.00);
 
-var_dump($il_gladiatore);
-var_dump($transformers);
+$movies = [$il_gladiatore, $transformers];
+
+// var_dump($il_gladiatore);
+// var_dump($transformers);
 ?>
 
 
@@ -27,49 +29,26 @@ var_dump($transformers);
         <h1 class="text-center">Movies</h1>
 
         <div class="row row-cols-3 my-5 ">
-            <!-- <h4><?php echo $il_gladiatore->getInfoPrice() ?> </h4>
-            <h6><?php echo $il_gladiatore->getFullInfo() ?></h6> -->
+            <!-- <div class="movie">
+                <h6><?php echo $il_gladiatore->getFullInfo() ?></h6>
+            </div>
+            <div class="movie">
+                <h6><?php echo $transformers->getFullInfo() ?></h6>
+            </div> -->
+            <!-- <h6><?php echo $il_gladiatore->getInfoPrice() ?> </h6> -->
 
-            <div class="card" style="width: 18rem;">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-footer">
-                    Card footer
+            <?php foreach ($movies as $movie) : ?>
+                <div class="card m-4 ">
+                    <div class="card-body">
+                        <h5 class="card-title"><?php echo $movie->nome ?> </h5>
+                        <p class="card-text">Regista: <?php echo $movie->regista ?></p>
+                        <p class="card-text">Cast: <?php echo $movie->getFullCast() ?></p>
+                        <p class="card-text">Voto: <?php echo $movie->voto ?></p>
+                        <p class="card-text">Lingua: <?php echo $movie->lingua ?></p>
+                        <p class="card-text">Prezzo: <?php echo $movie->price ?></p>
+                    </div>
                 </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-footer">
-                    Card footer
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-footer">
-                    Card footer
-                </div>
-            </div>
-            <div class="card" style="width: 18rem;">
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">An item</li>
-                    <li class="list-group-item">A second item</li>
-                    <li class="list-group-item">A third item</li>
-                </ul>
-                <div class="card-footer">
-                    Card footer
-                </div>
-            </div>
+            <?php endforeach; ?>
         </div>
 
     </div>
