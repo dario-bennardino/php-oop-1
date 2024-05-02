@@ -8,8 +8,9 @@ class Movie
     public $voto;
     public $lingua;
     public $price;
+    public $genere;
 
-    public function __construct(string $_name, string $_regista, array $_cast, float $_voto, string $_lingua, float $_price)
+    public function __construct(string $_name, string $_regista, array $_cast, float $_voto, string $_lingua, float $_price, array $_genere)
     {
         $this->nome = $_name;
         $this->regista = $_regista;
@@ -17,6 +18,7 @@ class Movie
         $this->voto = $_voto;
         $this->lingua = $_lingua;
         $this->price = $_price;
+        $this->genere = $_genere;
     }
 
     public function getInfoPrice()
@@ -34,5 +36,10 @@ class Movie
     public function getFullCast()
     {
         return implode(', ', $this->cast);
+    }
+
+    public function getFullGenre()
+    {
+        return implode(', ', $this->genere);
     }
 }
